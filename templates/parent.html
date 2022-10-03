@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<html>
+    <head>
+    {% block head %}
+        <meta charset="utf-8">
+        <title>Moja strona domowa</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% endblock %}
+    </head>
+    <body>
+        <h1>Witaj na mojej stronie domowej</h1>
+        <img src="{{url_for('static',filename='logo.jpg')}}" />
+        <div id="content">{% block content %}{% endblock %}</div>
+    </body>
+</html>
